@@ -3,5 +3,5 @@ from django.urls import path
 from nlp.views import summarize
 
 urlpatterns = [
-    path('summarize/', summarize),
+    path('summarize/', summarize, name='summarize'),
 ]
