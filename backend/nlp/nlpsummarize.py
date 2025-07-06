@@ -1,4 +1,11 @@
 from newspaper import Article
+import nltk
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 
 # Create your views here.
 def summarize_text(url):

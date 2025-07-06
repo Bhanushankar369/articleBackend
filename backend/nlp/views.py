@@ -9,6 +9,6 @@ from .nlpsummarize import summarize_text
 @api_view(['GET', 'POST'])
 def summarize(request):
     data = request.data
-    text = data.get('url', '')
+    text = data.get('url')
     result = summarize_text(text)
     return Response({"result": result}) 
